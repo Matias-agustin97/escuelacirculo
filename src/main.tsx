@@ -5,6 +5,33 @@ import { RouterProvider,createBrowserRouter } from 'react-router-dom'
 import HomePage from './pages/HomePage.tsx'
 import Errorelement from './pages/Errorelement.tsx'
 import NavBar from './components/NavBar.tsx'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#ffffff',
+      main: '#1a3678',
+      dark: '#002884',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f16a4a',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
+    info:{
+      main:"#fff"
+    }
+  },
+});
+
+
 
 
 const router= createBrowserRouter([
@@ -26,8 +53,9 @@ const router= createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+   <ThemeProvider theme={theme}>
     <RouterProvider router={router}>
-
     </RouterProvider>
+   </ThemeProvider>
   </React.StrictMode>,
 )

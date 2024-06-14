@@ -13,15 +13,20 @@
     
 
 
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: -5px -5px -2px black;
-}    
-.navbar{
+.logo-cont{
     flex: 1;
+    
+    max-height: 5.5rem;
+}
+
+.navbar{
+    flex: 3;
+}
+.navbarLogo{
+    max-height: 5.5rem;
+    padding: 0.5rem;
+    line-height: 1rem;
+
 }
 nav ul{
     font-family: "Rubik";
@@ -32,7 +37,7 @@ nav ul{
 }
 .navbar a,.navbar:active,.navbar:link{
     text-decoration: none;
-    color: $primary_color;
+    color:$primary_color;
     font-weight: 600;
     letter-spacing: 0.12rem;
 }
