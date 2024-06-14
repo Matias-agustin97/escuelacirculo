@@ -1,10 +1,12 @@
 import React from 'react'
-import Logo from "../assets/logo.jpg"
+import Logo from "../assets/navLogo.jpg"
+import { Outlet } from 'react-router-dom'
 function NavBar() {
   return (
+   <>
     <header>
       <img src={Logo} alt="Logo de la escuela" />
-        <nav>
+        <nav className='navbar'>
           <ul>
             <li><a href="">Home</a></li>
             <li><a href="">Nuestra escuela</a></li>
@@ -13,6 +15,8 @@ function NavBar() {
           </ul>
         </nav>
     </header>
+    <Outlet/>
+   </>
   )
 }
 

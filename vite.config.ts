@@ -18,6 +18,30 @@ export default defineConfig({
       short_name: 'escuela-circulo',
       description: 'Escuela de periodismo deportivo',
       theme_color: '#16337a',
+      icons:[
+        {
+          src: 'src/assets/pwa-64x64.png',
+          sizes: '64x64',
+          type: 'image/png'
+        },
+        {
+          src: 'src/assets/pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'src/assets/pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any'  
+        },
+        {
+          src: 'src/assets/maskable-icon-512x512.png',
+          sizes: '512x512',
+          type: 'src/assets/image/png',
+          purpose: 'maskable'
+        }
+      ]
     },
 
     workbox: {

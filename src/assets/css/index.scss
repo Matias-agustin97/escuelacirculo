@@ -1,0 +1,38 @@
+@font-face {
+    font-family:"Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik/Rubik-VariableFont_wght.ttf");
+}
+
+
+    $primary_color:#1a3678;
+    $secondary_color:#f16a4a;
+    
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -5px -5px -2px black;
+}    
+.navbar{
+    flex: 1;
+}
+nav ul{
+    font-family: "Rubik";
+    display: flex;
+    justify-content: space-evenly;
+    color: $primary_color;
+    list-style: none;
+}
+.navbar a,.navbar:active,.navbar:link{
+    text-decoration: none;
+    color: $primary_color;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+}
