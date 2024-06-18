@@ -1,23 +1,34 @@
 
-import { AppBar, CssBaseline, Toolbar,} from "@mui/material"
-import Logo from "../assets/navLogo.jpg"
+import { AppBar, Toolbar, useMediaQuery,} from "@mui/material"
+import Logo from "../assets/logo_nuevo.png"
 import { Outlet } from 'react-router-dom'
 
 
-//
+
 
 
 function NavBar() {
+
+
+
+
+  const matches = useMediaQuery('(min-width:600px)');
+
+
+
+
+
   return (
    <>
-    <header style={{position:"sticky"}}>
-     <AppBar position="sticky" color="info" >
+   
+     <AppBar position="sticky" color="primary" >
      
       <Toolbar sx={{display:"flex", justifyContent:"space-around"}}  >
       <div className="logo-cont" >
       <img src={Logo} alt="Logo de la escuela" className='navbarLogo' />
       </div>
-        <nav className='navbar'>
+        {matches ? (
+          <nav className='navbar'>
           <ul>
             <li><a href="">HOME</a></li>
             <li><a href="">NUESTRA ESCUELA</a></li>
@@ -26,14 +37,16 @@ function NavBar() {
             <li><a href="">NUESTROS PROFESORES</a></li>
             <li><a href="">CONTACTO</a></li>
           </ul>
-        </nav>
+        </nav>) : null
+        }
       </Toolbar>
      </AppBar>
     
-    </header>
+    
     <Outlet/>
    </>
   )
 }
 
 export default NavBar
+
