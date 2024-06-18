@@ -2,7 +2,9 @@
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <main className="landing-home">
+      <h1>ESCUELA DE PERIODISMO</h1>
+    </main>
   )
 }
 

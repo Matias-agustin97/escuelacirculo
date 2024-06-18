@@ -6,7 +6,11 @@
     font-family: "Rubik";
     src: url("../fonts/Rubik/Rubik-VariableFont_wght.ttf");
 }
-
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
     $primary_color:#1a3678;
     $secondary_color:#f16a4a;
@@ -15,16 +19,16 @@
 
 .logo-cont{
     flex: 1;
-    
-    max-height: 5.5rem;
+    max-height: 100%;
+
 }
 
 .navbar{
     flex: 3;
 }
 .navbarLogo{
-    max-height: 5.5rem;
-    padding: 0.5rem;
+    max-height: 6rem;
+    padding: 0.25rem 0.5rem ;
     line-height: 1rem;
 
 }
@@ -33,6 +37,7 @@ nav ul{
     display: flex;
     justify-content: space-evenly;
     color: $primary_color;
+    font-size: 0.8rem;
     list-style: none;
 }
 .navbar a,.navbar:active,.navbar:link{
@@ -40,4 +45,8 @@ nav ul{
     color:$primary_color;
     font-weight: 600;
     letter-spacing: 0.12rem;
+}
+.landing-home{
+    min-height: 100vh;
+    background-color: $primary_color;
 }
