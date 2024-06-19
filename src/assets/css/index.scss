@@ -60,3 +60,14 @@ nav ul{
     min-height: 100vh;
     background-color: green;
 }
+
+
+@media (max-width: 600px) {
+    .logo-cont{
+        display: flex;
+        justify-content: end;
+    }
+    .navbarLogo{
+        max-height: 4.5rem;
+    }
+}
