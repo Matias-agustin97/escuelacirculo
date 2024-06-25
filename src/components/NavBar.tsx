@@ -5,10 +5,10 @@ import Logo from "../assets/logo_nuevo.png"
 import { Outlet } from 'react-router-dom'
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
-
-
-
-
+import SchoolIcon from '@mui/icons-material/School';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
+import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 
 function NavBar() {
 
@@ -28,27 +28,32 @@ function NavBar() {
         <img src={Logo} style={{maxWidth:"50vw"}}/>
       <Divider/>
       <Container>
-        <List>
+        <List sx={{color:"#fff"}}>
           <ListItemButton>
             <ListItemIcon>
+              
+              <AccountBalanceIcon color="info"/>
             </ListItemIcon>
             
-            <ListItemText primary="inicio"/>
+            <ListItemText primary="Sobre la Facultad" />
           </ListItemButton>
           <ListItemButton>
             <ListItemIcon>
+            <SchoolIcon color="info"/>
             </ListItemIcon>
-            <ListItemText primary="recrusos para alumnnos"/>
+            <ListItemText primary="recursos para alumnnos"/>
           </ListItemButton>
           <ListItemButton>
             <ListItemIcon>
+              <FactCheckIcon color="info"/>
             </ListItemIcon>
             <ListItemText primary="Nuestro plan de estudios"/>
           </ListItemButton>
           <ListItemButton>
             <ListItemIcon>
+              <FeaturedPlayListIcon color="info"/>
             </ListItemIcon>
-            <ListItemText primary="Nuestra escuela"/>
+            <ListItemText primary="Lorem"/>
           </ListItemButton>
         </List>
       </Container>

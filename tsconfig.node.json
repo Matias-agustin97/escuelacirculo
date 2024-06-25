@@ -3,7 +3,7 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",//use to be bundler, had to change due to splidejs bug
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
