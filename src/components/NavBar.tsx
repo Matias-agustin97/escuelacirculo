@@ -1,19 +1,25 @@
 
-import { AppBar, Box, Container, Divider, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Toolbar, useMediaQuery,} from "@mui/material"
+import { AppBar, Box, Button, Container, Divider, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, MenuProps, Popover, Toolbar, useMediaQuery,} from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from "../assets/logo_nuevo.png"
 import { Outlet } from 'react-router-dom'
+import React from "react"
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import SchoolIcon from '@mui/icons-material/School';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import FactCheckIcon from '@mui/icons-material/FactCheck';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
+import { KeyboardArrowDownTwoTone } from "@mui/icons-material";
 
 function NavBar() {
 
+ 
 
 
+
+
+ 
 
   const matches = useMediaQuery('(min-width:600px)');
 
@@ -41,7 +47,7 @@ function NavBar() {
             <ListItemIcon>
             <SchoolIcon color="info"/>
             </ListItemIcon>
-            <ListItemText primary="recursos para alumnnos"/>
+            <ListItemText primary="Recursos para alumnnos"/>
           </ListItemButton>
           <ListItemButton>
             <ListItemIcon>
@@ -61,7 +67,14 @@ function NavBar() {
     )
   
 
-
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
 
   return (
    <>
@@ -81,12 +94,38 @@ function NavBar() {
         {matches ? (
           <nav className='navbar'>
           <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">NUESTRA ESCUELA</a></li>
-            <li><a href="">RECURSOS PARA ALUMNOS</a></li>
-            <li><a href="">NUESTRAS REDES</a></li>
-            <li><a href="">NUESTROS PROFESORES</a></li>
-            <li><a href="">CONTACTO</a></li>
+            <li><Button><a href="">HOME</a></Button></li>
+            <li><Button><a href="">NUESTRA ESCUELA</a></Button></li>
+            <li>
+            <Button color="info" onClick={handleClick} endIcon={<KeyboardArrowDownTwoTone color="info"/>}><p>RECURSOS PARA ALUMNOS</p>
+           
+            
+           </Button>
+           <Menu
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleClose}>Trabajos de campo</MenuItem>
+        <MenuItem onClick={handleClose}>Voluntariados y tarea de prensa</MenuItem>
+        <MenuItem onClick={handleClose}>Pasantias</MenuItem>
+      </Menu>
+              </li>
+            <li><Button><a href="">LOS 3 EJES</a></Button></li>
+            <li><Button><a href="">LA CARRERA</a></Button></li>
+            <li><Button><a href="">CONTACTO</a></Button></li>
           </ul>
         </nav>) : null
         }
