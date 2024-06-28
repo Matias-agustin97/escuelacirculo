@@ -33,6 +33,7 @@ function HomePage() {
   return (
     <>
     <main className="landing-home">
+      <section className="landing-blank-space"></section>
       <section className="carrusel-section">
         <Splide aria-label="carrusel de imagenes" options={options}   >
           <SplideSlide>

@@ -79,7 +79,7 @@ function NavBar() {
   return (
    <>
    
-     <AppBar position="sticky" color="primary" >
+     <AppBar position="sticky" color="primary" elevation={0}  >
      
       <Toolbar sx={{display:matches?"flex":"block", justifyContent:"space-around",flexDirection:matches ? "row": "left"}}  >
       {matches ? null :(
