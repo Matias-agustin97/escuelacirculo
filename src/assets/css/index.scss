@@ -68,14 +68,15 @@ nav a,p{
 
 .landing-home{
     min-height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(in lch,0deg, rgba(2,0,36,1) 0%, rgba(35,56,114,1) 35%);
     
-    display: flex;
 }
 
 
 .carrusel-section{
-    flex: 3;
-    max-width: 70%;
+    flex: 2;
+    max-width: 60%;
     height: 100vh;
     
 }
@@ -104,7 +105,8 @@ nav a,p{
 
 .nuestra-escuela-cont{
     min-height: 100vh;
-    background-color: #222;
+    background: rgb(2,0,36);
+    background: linear-gradient(in lch,0deg, rgba(2,0,36,1) 0%, rgba(35,56,114,1) 35%);
 
 }
 
