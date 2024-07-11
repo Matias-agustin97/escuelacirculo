@@ -101,7 +101,7 @@ function HomePage() {
 
 
   const options = {
-    height:"100vh",
+    height:"70vh",
     type         : 'loop',
     gap          : '1rem',
     autoplay     : true,
@@ -119,7 +119,7 @@ function HomePage() {
   return (
     <>
     <main className="landing-home">
-     <Container sx={{display:"flex",justifyContent:"space-evenly"}}>
+     <Container sx={{display:"flex",justifyContent:"space-evenly",paddingTop:"3rem"}}>
      
       <section className="carrusel-section">
         <Splide aria-label="carrusel de imagenes" options={options}   >
@@ -139,8 +139,8 @@ function HomePage() {
       <h1>Estudia Periodismo deportivo</h1>
      
        <Container>
-       <h3 style={{marginTop:"1.5rem"}}>Formando profesionales desde 1960</h3>
-      <Typography mb="3rem" mt="1rem">
+       <h3 style={{marginTop:"1.5rem",textAlign:"right"}}>Formando profesionales desde 1960</h3>
+      <Typography mb="3rem" mt="1rem" textAlign="right">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Dolore nobis quod repellendus doloremque aliquid cum numquam laborum illum porro
          sed accusantium, rerum consequuntur iste dolorem dignissimos ratione molestias hic rem?
