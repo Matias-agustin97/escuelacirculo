@@ -6,7 +6,7 @@ import '@splidejs/react-splide/css';
 import carrusel1 from "../assets/fotos/carrusel1.png"
 import carrusel2 from "../assets/fotos/carrusel1.png"
 import carrusel3 from "../assets/fotos/carrusel1.png"
-import { Box, Button, Container, IconButton, ImageList, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import { Box, Button, Container, IconButton, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
 import { Height, Info } from "@mui/icons-material";
 
 
@@ -110,8 +110,16 @@ function HomePage() {
    
   };
 
+  const optionsMobile={
+    height:"45vh",
+    type         : 'loop',
+    gap          : '1rem',
+    autoplay     : true,
+    pauseOnHover : false,
+    resetProgress: false,
+  }
 
-
+  const matches = useMediaQuery('(min-width:600px)');
 
 
 
@@ -119,10 +127,10 @@ function HomePage() {
   return (
     <>
     <main className="landing-home">
-     <Container sx={{display:"flex",justifyContent:"space-evenly",paddingTop:"3rem"}}>
+     <Container sx={{display:"flex",justifyContent:"space-evenly",paddingTop:"3rem",flexDirection: matches? "row":"column-reverse"}}>
      
       <section className="carrusel-section">
-        <Splide aria-label="carrusel de imagenes" options={options}   >
+        <Splide aria-label="carrusel de imagenes" options={matches? options : optionsMobile}   >
           <SplideSlide>
             <img src={carrusel1} alt=""/>
           </SplideSlide>
@@ -138,7 +146,7 @@ function HomePage() {
 
       <h1>Estudia Periodismo deportivo</h1>
      
-       <Container>
+       <Container sx={{paddingBottom:matches? "1rem" :"3rem"}}>
        <h3 style={{marginTop:"1.5rem",textAlign:"right"}}>Formando profesionales desde 1960</h3>
       <Typography mb="3rem" mt="1rem" textAlign="right">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
