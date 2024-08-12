@@ -110,6 +110,42 @@ nav a,p{
     background: linear-gradient(in lch,0deg, rgba(2,0,36,1) 0%, rgba(35,56,114,1) 35%);
 
 }
+.videos-cont{
+    padding: 2rem ;
+}
+.videos-cont h5{
+    color: $secondary_color;
+    font-family: "Rubik";
+    font-size: 4rem;
+    padding-bottom: 3rem;
+}
+.video-cont{
+    border: 0px;
+    display: block
+}
+.footer-cont{
+    background-color: $primary_color;
+    color: #fff;
+    font-family: "Montserrat";
+}
+.footer-logo-text,.footer-social-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-cont img{
+    height: 5rem;
+    width: auto;
+}
+.footer-text{
+    font-style: italic;
+    font-size: 0.73rem;
+}
+
+.footer-info{
+    font-style: italic;
+    font-size: 0.73rem;
+}
 
 @media (max-width: 600px) {
     .logo-cont{

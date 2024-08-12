@@ -11,6 +11,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import FactCheckIcon from '@mui/icons-material/FactCheck';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import { KeyboardArrowDownTwoTone } from "@mui/icons-material";
+import Footer from "./Footer";
 
 function NavBar() {
 
@@ -135,6 +136,7 @@ function NavBar() {
       {mobileDrawer}
     </Drawer>
     <Outlet/>
+    <Footer/>
    </>
   )
 }

@@ -6,7 +6,7 @@ import '@splidejs/react-splide/css';
 import carrusel1 from "../assets/fotos/carrusel1.png"
 import carrusel2 from "../assets/fotos/carrusel1.png"
 import carrusel3 from "../assets/fotos/carrusel1.png"
-import { Box, Button, Container, IconButton, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Container, Divider, IconButton, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
 import { Height, Info } from "@mui/icons-material";
 
 
@@ -149,19 +149,33 @@ function HomePage() {
        <Container sx={{paddingBottom:matches? "1rem" :"3rem"}}>
        <h3 style={{marginTop:"1.5rem",textAlign:"right"}}>Formando profesionales desde 1960</h3>
       <Typography mb="3rem" mt="1rem" textAlign="right">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Dolore nobis quod repellendus doloremque aliquid cum numquam laborum illum porro
-         sed accusantium, rerum consequuntur iste dolorem dignissimos ratione molestias hic rem?
-       Quasi, debitis. Recusandae modi animi eligendi officiis magni, iure est quo exercitationem 
-       quos rem laboriosam quidem veritatis maiores. Culpa voluptates minima aspernatur eveniet consequuntur suscipit velit perspiciatis rerum reiciendis autem.
+   
+
+La Escuela Superior de Periodismo Deportivo "José R. López Pájado" del Circulo de Periodistas Deportivos de Buenos Aires forma a los mejores y más destacados profesionales desde 1961, siendo la primera institución en hacerlo en toda América.
+
+Hoy seguimos formando con la misma pasión y el mismo compromiso que el primer día, proyectando nuestra historia y tradición al futuro. ¿Querés se periodista deportivo? Estudiá con nosotros. 
+
       </Typography>
-       <Button color="secondary" variant="contained" sx={{marginLeft:"2rem",px:"2rem"}}><p style={{color:"#ffd"}}>INSCRIBITE</p></Button>
+       <Button color="secondary" variant="contained" sx={{marginLeft:"2rem",px:"2rem"}}><p style={{color:"#ffd"}}>INGRESA A QUINTTOS</p></Button>
        </Container>
       </section>
      </Container>
       
     </main>
     <section className="nuestra-escuela-cont">
+      <Container>
+        <div className="videos-cont">
+          <h5>Conoce la escuela</h5>
+          <Divider />
+          <Container sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+          <iframe id="cc-m-video-youtu-container-14679679627" className="video-cont" frameBorder="0" allowFullScreen={true} data-src="https://www.youtube-nocookie.com/embed/6HYXZXOCj30?wmode=transparent&amp;vq=hd1080" src="https://www.youtube-nocookie.com/embed/6HYXZXOCj30?wmode=transparent&amp;vq=hd1080">
+</iframe>
+<iframe id="cc-m-video-youtu-container-14679679827" className="video-cont" frameBorder="0" allowFullScreen={true}  data-src="https://www.youtube-nocookie.com/embed/m9CidF5f0Kw?wmode=transparent&amp;vq=hd1080" src="https://www.youtube-nocookie.com/embed/m9CidF5f0Kw?wmode=transparent&amp;vq=hd1080">
+</iframe>
+          </Container>
+        </div>
+      </Container>
+      <Divider/>
      <Container>
       <Box sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
       <ImageList sx={{ width: "100%", height: "auto",flex:1 }}>
