@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage.tsx'
 import Errorelement from './pages/Errorelement.tsx'
 import NavBar from './components/NavBar.tsx'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Contacto from './pages/Contacto.tsx'
 
 
 
@@ -44,7 +45,10 @@ const router= createBrowserRouter([
         path:"/",
         element:<HomePage/>
       }
-
+      ,{
+        path:"/contacto",
+        element:<Contacto/>
+      }
     ]
   }
   

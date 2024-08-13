@@ -156,7 +156,7 @@ La Escuela Superior de Periodismo Deportivo "José R. López Pájado" del Circul
 Hoy seguimos formando con la misma pasión y el mismo compromiso que el primer día, proyectando nuestra historia y tradición al futuro. ¿Querés se periodista deportivo? Estudiá con nosotros. 
 
       </Typography>
-       <Button color="secondary" variant="contained" sx={{marginLeft:"2rem",px:"2rem"}}><p style={{color:"#ffd"}}>INGRESA A QUINTTOS</p></Button>
+       <Button color="secondary" variant="contained" sx={{marginLeft:"2rem",px:"2rem"}}><p style={{color:"#ffd"}}><a href="https://escuelacpd.quinttos.com/">INGRESA A QUINTTOS</a></p></Button>
        </Container>
       </section>
      </Container>
@@ -166,7 +166,7 @@ Hoy seguimos formando con la misma pasión y el mismo compromiso que el primer d
       <Container>
         <div className="videos-cont">
           <h5>Conoce la escuela</h5>
-          <Divider />
+          <div className="divider"></div>
           <Container sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
           <iframe id="cc-m-video-youtu-container-14679679627" className="video-cont" frameBorder="0" allowFullScreen={true} data-src="https://www.youtube-nocookie.com/embed/6HYXZXOCj30?wmode=transparent&amp;vq=hd1080" src="https://www.youtube-nocookie.com/embed/6HYXZXOCj30?wmode=transparent&amp;vq=hd1080">
 </iframe>

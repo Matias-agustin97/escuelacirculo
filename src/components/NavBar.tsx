@@ -77,6 +77,14 @@ function NavBar() {
       setAnchorEl(null);
     };
 
+    const [anchorElLaescuela, setAnchorElLaescuela] = React.useState<null | HTMLElement>(null);
+    const openLaEscuela = Boolean(anchorElLaescuela);
+    const handleClickLaEscuela = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorElLaescuela(event.currentTarget);
+    };
+    const handleCloseLaEscuela = () => {
+      setAnchorElLaescuela(null);
+    };
   return (
    <>
    
@@ -96,7 +104,35 @@ function NavBar() {
           <nav className='navbar'>
           <ul>
             <li><Button><a href="">HOME</a></Button></li>
-            <li><Button><a href="">NUESTRA ESCUELA</a></Button></li>
+            <li><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={handleClickLaEscuela}><a href="">NUESTRA ESCUELA</a></Button>
+            <Menu
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+        id="basic-menu-laescuela"
+        anchorEl={anchorElLaescuela}
+        open={openLaEscuela}
+        onClose={handleCloseLaEscuela}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleCloseLaEscuela}>Propuesta Integral</MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}>Plan de Estudios</MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}>Cursada presencial</MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}>Cursada hibrida</MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}>Nuestros Medios</MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}>Convenios con Universidades</MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}>Autoridades</MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}>Profesores</MenuItem>
+      </Menu>
+            
+            </li>
             <li>
             <Button color="info" onClick={handleClick} endIcon={<KeyboardArrowDownTwoTone color="info"/>}><p>RECURSOS PARA ALUMNOS</p>
            

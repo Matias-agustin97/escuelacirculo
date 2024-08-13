@@ -103,7 +103,16 @@ nav a,p{
     
 
 }
-
+.landing-svg-section a,a:active,a:visited,a:link{
+    text-decoration: none;
+    color: #fff;
+}
+.divider{
+    height: 0.2rem;
+    background-color: $secondary_color;
+    width: 70%;
+    margin-bottom: 3rem;
+}
 .nuestra-escuela-cont{
     min-height: 100vh;
     background: rgb(2,0,36);
@@ -113,6 +122,7 @@ nav a,p{
 .videos-cont{
     padding: 2rem ;
 }
+
 .videos-cont h5{
     color: $secondary_color;
     font-family: "Rubik";
@@ -121,7 +131,10 @@ nav a,p{
 }
 .video-cont{
     border: 0px;
-    display: block
+    display: block;
+    flex: 2;
+    padding: 1rem;
+    min-height: 30vh;
 }
 .footer-cont{
     background-color: $primary_color;
@@ -147,6 +160,44 @@ nav a,p{
     font-size: 0.73rem;
 }
 
+.contacto-cont{
+    min-height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(in lch,0deg, rgba(2,0,36,1) 0%, rgba(35,56,114,1) 35%);
+}
+
+.contacto-title{
+    color: $secondary_color;
+    font-size: 4rem;
+    font-family: "Rubik";
+    text-decoration: underline;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+.formulario-de-contacto{
+flex: 1;
+background-color: $secondary_color;
+padding: 2rem;
+
+}
+.contacto-iframe-cont{
+    padding: 1rem;
+    flex: 1;
+}
+.mapa-contacto{
+    width: 100%;
+    min-height: 400px;
+}
+.contacto-text-cont{
+    padding: 0 3rem;
+    display: flex;
+    font-size: 0.7rem;
+    flex-direction: column;
+    
+}
+.contacto-text-cont p{
+    padding: 1rem 0;
+}
 @media (max-width: 600px) {
     .logo-cont{
         display: flex;
