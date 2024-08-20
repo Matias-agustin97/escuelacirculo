@@ -4,25 +4,42 @@
 import {Splide, SplideSlide} from "@splidejs/react-splide"
 import '@splidejs/react-splide/css';
 import carrusel1 from "../assets/fotos/carrusel1.png"
-import carrusel2 from "../assets/fotos/carrusel1.png"
-import carrusel3 from "../assets/fotos/carrusel1.png"
-import { Box, Button, Container, Divider, IconButton, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
-import { Height, Info } from "@mui/icons-material";
+import carrusel2 from "../assets/fotos/carrusel_nuevo2.jpeg"
+import carrusel3 from "../assets/fotos/carrusel_nuevo3.jpeg"
+import carrusel4 from "../assets/fotos/carrusel_nuevo4.jpeg"
+import carrusel5 from "../assets/fotos/carrusel_nuevo5.jpeg"
+import { Box, Button, Container, Divider, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
 
-import Video1 from "../assets/videos/GASTON EDUL FRASE 1.mp4"
-import Video2 from "../assets/videos/GASTON EDUL FRASE 2.mp4"
-import Video3 from "../assets/videos/video_galeria1.mp4"
-import Video4 from "../assets/videos/video_galeria2.mp4"
-
+//import Video2 from "../assets/videos/GASTON EDUL FRASE 2.mp4"
+//import Video3 from "../assets/videos/video_galeria1.mp4"
+//import Video4 from "../assets/videos/video_galeria2.mp4"
+//import 
 const itemData = [
  
   
   {
-    img: Video1,
+    img: "//f",
     title: 'Bike',
     text: 'Gaston Edul',
     cols: 4,
   },
+  {
+    img: "//asdfdsad",
+    title: 'Bike',
+    text: 'Gaston Edul',
+    cols: 4,
+  }, {
+    img: "//assdfdad",
+    title: 'Bike',
+    text: 'Gaston Edul',
+    cols: 4,
+  }, {
+    img: "//asffdad",
+    title: 'Bike',
+    text: 'Gaston Edul',
+    cols: 4,
+  }, 
+  
 ];
 
 
@@ -72,14 +89,20 @@ function HomePage() {
       <section className="carrusel-section">
         <Splide aria-label="carrusel de imagenes" options={matches? options : optionsMobile}   >
           <SplideSlide>
-            <img src={carrusel1} alt=""/>
+            <img src={carrusel1} alt="" />
           </SplideSlide>
         <SplideSlide>
-            <img src={carrusel2} alt="Image 2"/>
+            <img src={carrusel2} alt="Image 2" style={{height:"100%",width:"100%"}}/>
         </SplideSlide>
        <SplideSlide>
-            <img src={carrusel3}/>
+            <img src={carrusel3} style={{height:"100%",width:"100%"}}/>
         </SplideSlide>
+        <SplideSlide>
+            <img src={carrusel4} alt="" style={{height:"100%",width:"100%"}}/>
+          </SplideSlide>
+          <SplideSlide>
+            <img src={carrusel5} alt="" style={{height:"100%",width:"100%"}}/>
+          </SplideSlide>
         </Splide>
       </section>
       <section className="landing-svg-section">
@@ -96,7 +119,7 @@ La Escuela Superior de Periodismo Deportivo "José R. López Pájado" del Circul
 Hoy seguimos formando con la misma pasión y el mismo compromiso que el primer día, proyectando nuestra historia y tradición al futuro. ¿Querés se periodista deportivo? Estudiá con nosotros. 
 
       </Typography>
-       <Button color="secondary" variant="contained" sx={{marginLeft:"2rem",px:"2rem"}}><p style={{color:"#ffd"}}><a href="https://escuelacpd.quinttos.com/">INGRESA A QUINTTOS</a></p></Button>
+       
        </Container>
       </section>
      </Container>

@@ -1,5 +1,5 @@
 
-import { AppBar, Box, Button, Container, Divider, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, MenuProps, Popover, Toolbar, useMediaQuery,} from "@mui/material"
+import { AppBar, Box, Button, Container, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, Toolbar, Typography, useMediaQuery,} from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from "../assets/logo_nuevo.png"
 import { Link, Outlet } from 'react-router-dom'
@@ -29,44 +29,126 @@ function NavBar() {
   const [drawerStatus, setdrawerStatus] = useState(false)
 
 
+  ////////////////////////////////////////
+  const espacioAlumnos=[
+    {path:"https://escuelacpd.quinttos.com/",text:"Acceso a Quinttos"},
+    {path:"mail-insti",text:"Acceso a Email Institucional"}
+  ]
+
+  const [espacioAlumnosActive, setespacioAlumnosActive] = useState(false)
+  ///////////////////////////////////////////////
+  const cursos =[
+    {path:"propuestas-de-actualizacion",text:"Propuestas de Actualizacion"}
+  ]
+  const [cursosActive, setcursosActive] = useState(false)
+  //////////////////////////////////
+  const laEscuela =[
+    {path:"/propuesta",text:"Propuesta Integral"},
+    {path:"/plan-de-estudios",text:"Plan de Estudios"},
+    {path:"/cursada-presencial",text:"Cursada Presencial"},
+    {path:"/cursada-hibrida",text:"Cursada Hibrida"},
+    {path:"/nuestros-medios",text:"Nuestros Medios"},
+    {path:"/convenios",text:"Convenios con Universidades"},
+    {path:"/autoridades",text:"Autoridades"},
+    {path:"/profesores",text:"Profesores"},
+    {path:"/trabajo-de-campo",text:"Trabajo de campo"},
+    {path:"/voluntariado",text:"Voluntariado y tarea de prensa"},
+    
+
+  ]
+  
+  
+  const [laEscuelaActive, setlaEscuelaActive] = useState(false)
+  //////////////////////////////////
+ const nuestraHistoria =[{path:"/periodistas",text:"Circulo de periodistas deportivos"},
+  {path:"/olimpia",text:"Premios Olimpia"}
+ ];
+ const [nuestraHistoriaActive, setnuestraHistoriaActive] = useState(false)
   const mobileDrawer=(
   
-      <Box  sx={{width:"50vw",backgroundColor:"#233872",minHeight:"100vh"}} >
+      <Box  sx={{width:"60vw",backgroundColor:"#233872",minHeight:"150vh"}} >
         <img src={Logo} style={{maxWidth:"50vw"}}/>
       <Divider/>
       <Container>
-        <List sx={{color:"#fff"}}>
-          <ListItemButton>
-            <ListItemIcon>
-              
-              <AccountBalanceIcon color="info"/>
-            </ListItemIcon>
+        <List sx={{color:"#fff",textAlign:"left"}}>
+        <Box><Button><Link to={""}>INICIO</Link></Button></Box>
+        <Box><Button sx={{textAlign:"left"}}><Link to={""}>PATRIMONIO DE LA CIUDAD</Link></Button></Box>
+        <Box><Button  endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={()=>setnuestraHistoriaActive(!nuestraHistoriaActive)}><Link to={""}>NUESTRA HISTORIA</Link></Button>
+        <Box sx={{display:"flex",flexDirection:"column"}}>
+          {
+           nuestraHistoriaActive ? nuestraHistoria.map((el)=>{
+            return <Button key={el.text}><Link to={el.path}>{el.text}</Link></Button>
+          }):null 
+          
+          
+          }
+        </Box>
+        </Box>
+        <Box><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={()=>setlaEscuelaActive(!laEscuelaActive)}><Link to={""}>La Escuela</Link></Button>
+        <Box sx={{display:"flex",flexDirection:"column"}}>
+          {
+           laEscuelaActive ? laEscuela.map((ele)=>{
+          
             
-            <ListItemText primary="Sobre la Facultad" />
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemIcon>
-            <SchoolIcon color="info"/>
-            </ListItemIcon>
-            <ListItemText primary="Recursos para alumnnos"/>
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemIcon>
-              <FactCheckIcon color="info"/>
-            </ListItemIcon>
-            <ListItemText primary="Nuestro plan de estudios"/>
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemIcon>
-              <FeaturedPlayListIcon color="info"/>
-            </ListItemIcon>
-            <ListItemText primary="Lorem"/>
-          </ListItemButton>
+            return <Button key={ele.text}><Link to={ele.path}>{ele.text}</Link></Button>
+          }):null 
+          
+          
+          }
+        </Box>
+        </Box>
+        <Box><Button><Link to={""}>Pasantias</Link></Button></Box>
+
+        <Box><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={()=>setcursosActive((e)=>!e)}><Link to={""}>CURSOS</Link></Button>    
+        <Box sx={{display:"flex",flexDirection:"column"}}>
+          {
+           cursosActive ? cursos.map((ele)=>{
+          
+            
+            return <Button key={ele.text}><Link to={ele.path}>{ele.text}</Link></Button>
+          }):null 
+          
+          
+          }
+        </Box>
+        </Box>
+      
+        <Box><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={()=>setespacioAlumnosActive(!espacioAlumnosActive)} ><Link to={""}>Espacio Alumnos</Link></Button></Box>
+        <Box sx={{display:"flex",flexDirection:"column"}}>
+          {
+           espacioAlumnosActive ? espacioAlumnos.map((ele)=>{
+            if(ele.path=="https://escuelacpd.quinttos.com/"){
+              return <Button key={ele.text}><a href={ele.path}>{ele.text}</a></Button>
+            }
+            
+            return <Button key={ele.text}><Link to={ele.path}>{ele.text}</Link></Button>
+          }):null 
+          
+          
+          }
+        </Box>
+        <Box><Button><Link to={""}>Aranceles</Link></Button></Box>
+        <Box><Button><Link to={""}>INSCRIBITE</Link></Button></Box>
+        <Box><Button><Link to={""}>Contacto</Link></Button></Box>
         </List>
       </Container>
       </Box>
     )
     
+
+    const [anchorCursos, setAnchorCursos ]= React.useState<null | HTMLElement>(null)
+      
+      const openCursos = Boolean(anchorCursos); 
+      
+    const handleClickCursos = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorCursos(event.currentTarget);
+    };
+    const handleCloseCursos = () => {
+      setAnchorCursos(null);
+    };
+
+
+
     const [anchorElLaCarrera, setAnchorElLaCarrera] = React.useState<null | HTMLElement>(null);
     const openLaCarrera = Boolean(anchorElLaCarrera);
     const handleClickLaCarrera = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -76,7 +158,14 @@ function NavBar() {
       setAnchorElLaCarrera(null);
     };
 
-
+    const [anchorEspacioAlumnos, setAnchorEspacioAlumnos] = React.useState<null | HTMLElement>(null);
+    const openEspacioAlumnos = Boolean(anchorEspacioAlumnos);
+    const handleClickEspacioAlumnos = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEspacioAlumnos(event.currentTarget);
+    };
+    const handleCloseEspacioAlumnos = () => {
+      setAnchorEspacioAlumnos(null);
+    };
 
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
@@ -100,7 +189,7 @@ function NavBar() {
    
      <AppBar position="sticky" color="primary" elevation={0}  >
      
-      <Toolbar sx={{display:matches?"flex":"block", justifyContent:"space-around",flexDirection:matches ? "row": "left"}}  >
+      <Toolbar sx={{display:matches?"flex":"block", justifyContent:"start",flexDirection:matches ? "row": "left"}}  >
       {matches ? null :(
           <IconButton color="info" size="large" onClick={()=>setdrawerStatus(!drawerStatus)} sx={{zIndex:"99"}}>
             {drawerStatus ? <CloseIcon sx={{fontSize:"2.8rem"}}/> : <MenuIcon sx={{fontSize:"2.8rem"}}/>}
@@ -113,8 +202,9 @@ function NavBar() {
         {matches ? (
           <nav className='navbar'>
           <ul>
-            <li><Button><Link to="/">HOME</Link></Button></li>
-            <li><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={handleClickLaEscuela} ><a>NUESTRA ESCUELA</a></Button>
+            <li><Button><Link to="/">INICIO</Link></Button></li>
+            <li><Button><Link to="/">PATRIMONIO DE LA CIUDAD</Link></Button></li>
+            <li><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={handleClickLaEscuela} ><a>NUESTRA HISTORIA</a></Button>
             <Menu
             anchorOrigin={{
               vertical: 'bottom',
@@ -132,19 +222,15 @@ function NavBar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">Propuesta Integral</Link></MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">CIRCULO DE PERIODISTAS DEPORTIVOS</Link></MenuItem>
        
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">Cursada presencial</Link></MenuItem>
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">Cursada hibrida</Link></MenuItem>
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">Nuestros Medios</Link></MenuItem>
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">Convenios con Universidades</Link></MenuItem>
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">Autoridades</Link></MenuItem>
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">Profesores</Link></MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">PREMIOS OLIMPIA</Link></MenuItem>
+       
       </Menu>
             
             </li>
             <li>
-            <Button color="info" onClick={handleClick} endIcon={<KeyboardArrowDownTwoTone color="info"  className="navbar-menuitem" />}><p>RECURSOS PARA ALUMNOS</p>
+            <Button color="info" onClick={handleClick} endIcon={<KeyboardArrowDownTwoTone color="info"  className="navbar-menuitem" />}><Link to={""}>LA ESCUELA</Link>
            
             
            </Button>
@@ -165,12 +251,20 @@ function NavBar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">Trabajos de campo</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""  className="navbar-menuitem">Voluntariados y tarea de prensa</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">Pasantias</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">PROPUESTA INTEGRAL</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""  className="navbar-menuitem">PLAN DE ESTUDIOS</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">CURSADA PRESENCIAL</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">CURSADA HIBRIDA</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">NUESTROS MEDIOS</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">CONVENIOS CON UNIVERSIDADES</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">AUTORIDADES</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">PROFESORES</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">TRABAJO DE CAMPO</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">VOLUNTARIADOS Y TAREA DE PRENSA</Link></MenuItem>
       </Menu>
               </li>
-            <li><Button><Link to="/los-3-ejes">LOS 3 EJES</Link></Button></li>
+            <li><Button><Link to="/los-3-ejes">PASANTIAS</Link></Button></li>
+            
             <li>
               <Button onClick={handleClickLaCarrera} endIcon={<KeyboardArrowDownTwoTone color="info"/>}  className="navbar-menuitem"><a>LA CARRERA</a></Button>
               <Menu
@@ -196,13 +290,59 @@ function NavBar() {
         
       </Menu>
             </li>
-            <li><Button><Link to="/contacto">CONTACTO</Link></Button></li>
+            <li><Button  endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={handleClickCursos}><Link to="">CURSOS</Link></Button>
+            <Menu
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+        id="basic-menu-laCarrera"
+        anchorEl={anchorCursos}
+        open={openCursos}
+        onClose={handleCloseCursos}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleCloseCursos}><Link to="/aranceles" className="navbar-menuitem">PROPUESTAS DE ACTUALIZACIÓN</Link></MenuItem> 
+      </Menu>            
+            </li>
+            <li>
+              <Button endIcon={<KeyboardArrowDownTwoTone color="info"/>}  onClick={handleClickEspacioAlumnos}><Link to={""}>ESPACIO ALUMNOS</Link></Button>
+              <Menu
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+        id="basic-menu-laCarrera"
+        anchorEl={anchorEspacioAlumnos}
+        open={openEspacioAlumnos}
+        onClose={handleCloseEspacioAlumnos}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleCloseEspacioAlumnos}><Link to="/aranceles" className="navbar-menuitem">ACCESO A QUINTTOS</Link></MenuItem> 
+        <MenuItem onClick={handleCloseEspacioAlumnos}><Link to="/aranceles" className="navbar-menuitem">ACCESO A EMAIL INSTITUCIONAL</Link></MenuItem> 
+      </Menu>            
+            </li>
+            <li><Button><Link to={""}>ARANCELES</Link></Button></li>
+            <li><Button><Link to={""}>INSCRIBITE</Link></Button></li>
+            <li><Button><Link to={""}>CONTACTO</Link></Button></li>
           </ul>
         </nav>) : null
         }
       </Toolbar>
      </AppBar>
-    <Drawer open={drawerStatus} onClose={()=>setdrawerStatus(false)} anchor="right">
+    <Drawer open={drawerStatus} onClose={()=>setdrawerStatus(false)} anchor="left">
       {mobileDrawer}
     </Drawer>
     <Outlet/>
