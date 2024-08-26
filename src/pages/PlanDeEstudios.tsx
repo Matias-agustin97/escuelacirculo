@@ -1,10 +1,14 @@
-import { Box, Container } from '@mui/material'
-import React from 'react'
+import { Box, Container, useMediaQuery } from '@mui/material'
+
 
 function PlanDeEstudios() {
+
+
+  const matches = useMediaQuery('(min-width:600px)');
+
   return (
-    <section className='nuestra-historia'>
-      <Container sx={{paddingTop:"2rem"}}>
+    <section className='nuestra-historia pad-mobile'>
+      <Container sx={{paddingTop:"2rem",px:matches?"2rem": "1rem"}}>
         <p className='home-inscripciones-cont-p1'>PLAN DE ESTUDIOS</p>
        
         <Box>

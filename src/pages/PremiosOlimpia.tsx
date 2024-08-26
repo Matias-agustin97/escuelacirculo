@@ -1,5 +1,5 @@
 import { Box, Container } from '@mui/material'
-import React from 'react'
+
 import Olimpia from "../assets/fotos/premios_olimpia.jpg"
 import Tapia from "../assets/fotos/tapia.jpg"
 

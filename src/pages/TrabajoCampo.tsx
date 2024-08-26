@@ -1,5 +1,5 @@
 import { Box, Container } from '@mui/material'
-import React from 'react'
+
 import Picture from "../assets/fotos/carrusel_nuevo5.jpeg"
 function TrabajoCampo() {
   return (

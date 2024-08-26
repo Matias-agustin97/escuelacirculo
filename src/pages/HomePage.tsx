@@ -8,8 +8,8 @@ import carrusel2 from "../assets/fotos/carrusel_nuevo2.jpeg"
 import carrusel3 from "../assets/fotos/carrusel_nuevo3.jpeg"
 import carrusel4 from "../assets/fotos/carrusel_nuevo4.jpeg"
 import carrusel5 from "../assets/fotos/carrusel_nuevo5.jpeg"
-import { Box, Button, Container, Divider, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
-import { Instagram, InstallDesktopOutlined, MailOutlined, PhoneCallback, WhatsApp } from "@mui/icons-material";
+import { Box, Container, Divider, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
+import { Instagram, MailOutlined, PhoneCallback, WhatsApp } from "@mui/icons-material";
 //import Video2 from "../assets/videos/GASTON EDUL FRASE 2.mp4"
 //import Video3 from "../assets/videos/video_galeria1.mp4"
 //import Video4 from "../assets/videos/video_galeria2.mp4"

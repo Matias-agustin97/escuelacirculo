@@ -1,15 +1,12 @@
 
-import { AppBar, Box, Button, Container, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, Toolbar, Typography, useMediaQuery,} from "@mui/material"
+import { AppBar, Box, Button, Container, Divider, Drawer, IconButton, List, Menu, MenuItem, Toolbar,  useMediaQuery,} from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from "../assets/logo_nuevo.png"
 import { Link, Outlet } from 'react-router-dom'
 import React from "react"
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
-import SchoolIcon from '@mui/icons-material/School';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import FactCheckIcon from '@mui/icons-material/FactCheck';
-import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
+
 import { KeyboardArrowDownTwoTone } from "@mui/icons-material";
 import Footer from "./Footer";
 
@@ -60,7 +57,7 @@ function NavBar() {
   
   const [laEscuelaActive, setlaEscuelaActive] = useState(false)
   //////////////////////////////////
- const nuestraHistoria =[{path:"/periodistas",text:"Circulo de periodistas deportivos"},
+ const nuestraHistoria =[{path:"/nuestra-historia",text:"Circulo de periodistas deportivos"},
   {path:"/olimpia",text:"Premios Olimpia"}
  ];
  const [nuestraHistoriaActive, setnuestraHistoriaActive] = useState(false)
@@ -97,7 +94,7 @@ function NavBar() {
           }
         </Box>
         </Box>
-        <Box><Button><Link to={""}>Pasantias</Link></Button></Box>
+        <Box><Button><Link to={"/pasantias"}>Pasantias</Link></Button></Box>
 
         <Box><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={()=>setcursosActive((e)=>!e)}><Link to={""}>CURSOS</Link></Button>    
         <Box sx={{display:"flex",flexDirection:"column"}}>
@@ -149,14 +146,14 @@ function NavBar() {
 
 
 
-    const [anchorElLaCarrera, setAnchorElLaCarrera] = React.useState<null | HTMLElement>(null);
-    const openLaCarrera = Boolean(anchorElLaCarrera);
-    const handleClickLaCarrera = (event: React.MouseEvent<HTMLButtonElement>) => {
-      setAnchorElLaCarrera(event.currentTarget);
-    };
-    const handleCloseLaCarrera = () => {
-      setAnchorElLaCarrera(null);
-    };
+   // const [anchorElLaCarrera, setAnchorElLaCarrera] = React.useState<null | HTMLElement>(null);
+    /// openLaCarrera = Boolean(anchorElLaCarrera);
+    //const handleClickLaCarrera = (event: React.MouseEvent<HTMLButtonElement>) => {
+   //   setAnchorElLaCarrera(event.currentTarget);
+   // };
+   // const handleCloseLaCarrera = () => {
+   //   setAnchorElLaCarrera(null);
+   // };
 
     const [anchorEspacioAlumnos, setAnchorEspacioAlumnos] = React.useState<null | HTMLElement>(null);
     const openEspacioAlumnos = Boolean(anchorEspacioAlumnos);
@@ -203,7 +200,7 @@ function NavBar() {
           <nav className='navbar'>
           <ul>
             <li><Button><Link to="/">INICIO</Link></Button></li>
-            <li><Button><Link to="/">PATRIMONIO DE LA CIUDAD</Link></Button></li>
+            <li><Button><Link to="/patrimonio">PATRIMONIO DE LA CIUDAD</Link></Button></li>
             <li><Button endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={handleClickLaEscuela} ><a>NUESTRA HISTORIA</a></Button>
             <Menu
             anchorOrigin={{
@@ -222,9 +219,9 @@ function NavBar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">CIRCULO DE PERIODISTAS DEPORTIVOS</Link></MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}><Link to="/nuestra-historia"   className="navbar-menuitem">CIRCULO DE PERIODISTAS DEPORTIVOS</Link></MenuItem>
        
-        <MenuItem onClick={handleCloseLaEscuela}><Link to=""   className="navbar-menuitem">PREMIOS OLIMPIA</Link></MenuItem>
+        <MenuItem onClick={handleCloseLaEscuela}><Link to="/premios-olimpia"   className="navbar-menuitem">PREMIOS OLIMPIA</Link></MenuItem>
        
       </Menu>
             
@@ -251,19 +248,19 @@ function NavBar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">PROPUESTA INTEGRAL</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""  className="navbar-menuitem">PLAN DE ESTUDIOS</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">CURSADA PRESENCIAL</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">CURSADA HIBRIDA</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">NUESTROS MEDIOS</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">CONVENIOS CON UNIVERSIDADES</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">AUTORIDADES</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">PROFESORES</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">TRABAJO DE CAMPO</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to=""   className="navbar-menuitem">VOLUNTARIADOS Y TAREA DE PRENSA</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/propuesta-integral"   className="navbar-menuitem">PROPUESTA INTEGRAL</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/plan-de-estudios"  className="navbar-menuitem">PLAN DE ESTUDIOS</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/cursada-presencial"   className="navbar-menuitem">CURSADA PRESENCIAL</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/cursada-hibrida"   className="navbar-menuitem">CURSADA HIBRIDA</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/nuestros-medios"   className="navbar-menuitem">NUESTROS MEDIOS</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/convenios-con-universidades"   className="navbar-menuitem">CONVENIOS CON UNIVERSIDADES</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/autoridades"   className="navbar-menuitem">AUTORIDADES</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/profesores"   className="navbar-menuitem">PROFESORES</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="trabajo-de-campo"   className="navbar-menuitem">TRABAJO DE CAMPO</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/voluntariado"   className="navbar-menuitem">VOLUNTARIADOS Y TAREA DE PRENSA</Link></MenuItem>
       </Menu>
               </li>
-            <li><Button><Link to="/los-3-ejes">PASANTIAS</Link></Button></li>
+            <li><Button><Link to="/pasantias">PASANTIAS</Link></Button></li>
             
         
             <li><Button  endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={handleClickCursos}><Link to="">CURSOS</Link></Button>
@@ -284,7 +281,7 @@ function NavBar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleCloseCursos}><Link to="/aranceles" className="navbar-menuitem">PROPUESTAS DE ACTUALIZACIÓN</Link></MenuItem> 
+        <MenuItem onClick={handleCloseCursos}><Link to="/propuestas-actualizacion" className="navbar-menuitem">PROPUESTAS DE ACTUALIZACIÓN</Link></MenuItem> 
       </Menu>            
             </li>
             <li>
@@ -306,13 +303,13 @@ function NavBar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleCloseEspacioAlumnos}><Link to="/aranceles" className="navbar-menuitem">ACCESO A QUINTTOS</Link></MenuItem> 
-        <MenuItem onClick={handleCloseEspacioAlumnos}><Link to="/aranceles" className="navbar-menuitem">ACCESO A EMAIL INSTITUCIONAL</Link></MenuItem> 
+        <MenuItem onClick={handleCloseEspacioAlumnos}><a href="" className="navbar-menuitem">ACCESO A QUINTTOS</a></MenuItem> 
+        <MenuItem onClick={handleCloseEspacioAlumnos}><Link to="" className="navbar-menuitem">ACCESO A EMAIL INSTITUCIONAL</Link></MenuItem> 
       </Menu>            
             </li>
-            <li><Button><Link to={""}>ARANCELES</Link></Button></li>
-            <li><Button><Link to={""}>INSCRIBITE</Link></Button></li>
-            <li><Button><Link to={""}>CONTACTO</Link></Button></li>
+            <li><Button><Link to={"/aranceles"}>ARANCELES</Link></Button></li>
+            <li><Button><Link to={"/contacto"}>INSCRIBITE</Link></Button></li>
+            <li><Button><Link to={"/contacto"}>CONTACTO</Link></Button></li>
           </ul>
         </nav>) : null
         }

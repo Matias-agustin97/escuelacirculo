@@ -1,5 +1,5 @@
 import { Container } from '@mui/material'
-import React from 'react'
+
 import footerLogo from "../assets/pwa-192x192.png"
 import EmailSharpIcon from '@mui/icons-material/EmailSharp';
 import XIcon from '@mui/icons-material/X';
