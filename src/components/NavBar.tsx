@@ -265,31 +265,7 @@ function NavBar() {
               </li>
             <li><Button><Link to="/los-3-ejes">PASANTIAS</Link></Button></li>
             
-            <li>
-              <Button onClick={handleClickLaCarrera} endIcon={<KeyboardArrowDownTwoTone color="info"/>}  className="navbar-menuitem"><a>LA CARRERA</a></Button>
-              <Menu
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'right',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-        id="basic-menu-laCarrera"
-        anchorEl={anchorElLaCarrera}
-        open={openLaCarrera}
-        onClose={handleCloseLaCarrera}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem onClick={handleCloseLaCarrera}><Link to="/aranceles" className="navbar-menuitem">Aranceles</Link></MenuItem>
-        <MenuItem onClick={handleCloseLaCarrera}><Link to="/plan-de-estudios" className="navbar-menuitem">Plan de Estudios</Link></MenuItem>
-        <MenuItem onClick={handleCloseLaCarrera}><Link to="/" className="navbar-menuitem">Cursada presencial</Link></MenuItem>
         
-      </Menu>
-            </li>
             <li><Button  endIcon={<KeyboardArrowDownTwoTone color="info"/>} onClick={handleClickCursos}><Link to="">CURSOS</Link></Button>
             <Menu
             anchorOrigin={{

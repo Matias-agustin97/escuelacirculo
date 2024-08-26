@@ -9,7 +9,7 @@ import carrusel3 from "../assets/fotos/carrusel_nuevo3.jpeg"
 import carrusel4 from "../assets/fotos/carrusel_nuevo4.jpeg"
 import carrusel5 from "../assets/fotos/carrusel_nuevo5.jpeg"
 import { Box, Button, Container, Divider, ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery } from "@mui/material";
-
+import { Instagram, InstallDesktopOutlined, MailOutlined, PhoneCallback, WhatsApp } from "@mui/icons-material";
 //import Video2 from "../assets/videos/GASTON EDUL FRASE 2.mp4"
 //import Video3 from "../assets/videos/video_galeria1.mp4"
 //import Video4 from "../assets/videos/video_galeria2.mp4"
@@ -109,17 +109,15 @@ function HomePage() {
 
       <h1>Estudia Periodismo deportivo</h1>
      
+
        <Container sx={{paddingBottom:matches? "1rem" :"3rem"}}>
-       <h3 style={{marginTop:"1.5rem",textAlign:"right"}}>Formando profesionales desde 1960</h3>
-      <Typography mb="3rem" mt="1rem" textAlign="right">
-   
-
-La Escuela Superior de Periodismo Deportivo "José R. López Pájado" del Circulo de Periodistas Deportivos de Buenos Aires forma a los mejores y más destacados profesionales desde 1961, siendo la primera institución en hacerlo en toda América.
-
-Hoy seguimos formando con la misma pasión y el mismo compromiso que el primer día, proyectando nuestra historia y tradición al futuro. ¿Querés se periodista deportivo? Estudiá con nosotros. 
-
-      </Typography>
-       
+        <h4  style={{marginTop:"1.5rem",textAlign:"right"}}>ESCUELA SUPERIOR DE PERIODISMO DEPORTIVO</h4>
+       <h3 style={{marginTop:"1.5rem",textAlign:"right",fontStyle:"italic"}}>José R. López Pájaro</h3>
+      <Typography mb="3rem" mt="1rem" textAlign="right">Rodríguez Peña 628, Ciudad de Buenos Aires</Typography>
+      <Typography sx={{display:"flex",alignItems:"center",padding:"0.45rem 0.4rem"}} fontSize="1.4rem"><WhatsApp/><a  href="https://walink.co/447686" rel="nofollow" title="Whatsapp" target="_blank">+54 9 11 5133-7164</a></Typography>
+      <Typography  sx={{display:"flex",alignItems:"center",padding:"0.25rem 0.4rem"}}  fontSize="1.4rem"><MailOutlined/><a href="mailto:consultas@escuelacirculo.edu.ar">consultas@escuelacirculo.edu.ar</a></Typography>
+       <Typography  sx={{display:"flex",alignItems:"center",padding:"0.25rem 0.4rem"}}  fontSize="1.4rem"><PhoneCallback/><a href="tel:+ 011-4485-5213"> 011-4485-5213</a></Typography>
+       <Typography sx={{display:"flex",alignItems:"center",padding:"0.45rem 0.4rem"}}  fontSize="1.4rem"><Instagram/><a href="https://www.instagram.com/escueladelcirculo/" target="_blank">@escueladelcirculo</a></Typography>
        </Container>
       </section>
      </Container>
@@ -127,14 +125,40 @@ Hoy seguimos formando con la misma pasión y el mismo compromiso que el primer d
     </main>
     <section className="nuestra-escuela-cont">
       <Container>
-        <div className="videos-cont">
-          <h5>Conoce la escuela</h5>
+        <div className="home-inscripciones-cont">
+          <h5>INSCRIPCIONES CICLO LECTIVO 2025</h5>
+          <p className="home-inscripciones-cont-p1">Te esperamos para desarrollar la formación hacia tu anhelo profesional</p>
+          <p className="home-inscripciones-cont-p2">- Ingreso 2025: Se desarrollará hasta el 31 de marzo.
+        <br />
+- Inicio de ciclo lectivo: tercera semana de marzo de 2025
+</p>
+<p className="home-inscripciones-cont-p1">Somos la casa del periodismo deportivo en Argentina
+</p>
+<p className="home-inscripciones-cont-p2">- Desde 1954, entregamos los Premios Olimpia a la excelencia en el
+deporte argentino.
+<br />
+- Desde 1960, formamos a las nuevas generaciones de comunicadores
+de Latinoamérica con pasión por informar deportes.
+<br />
+- Desde 2023, somos Patrimonio Cultural de la Ciudad de Buenos Aires
+Tecnicatura Superior en Periodismo con Orientación en Deportes Res. 49/SSGECP/12 y Disp. DI-2014-226-DGEGP
+<br />
+- TÍTULO OFICIAL
+<br />
+- NIVEL TERCIARIO
+<br />
+- DURACIÓN TRES AÑOS
+<br />
+-MODALIDAD PRESENCIAL (TURNOS MAÑANA Y TARDE),
+HÍBRIDA (TURNO NOCHE)*
+<br />
+*50% PRESENCIAL Y 50% VIRTUAL -SINCRÓNICA-. SEGUNDOS Y
+TERCEROS AÑOS TURNO NOCHE UN DÍA CON MATERIAS ASINCRÓNICAS.
+
+</p>
           <div className="divider"></div>
           <Container sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-          <iframe id="cc-m-video-youtu-container-14679679627" className="video-cont" frameBorder="0" allowFullScreen={true} data-src="https://www.youtube-nocookie.com/embed/6HYXZXOCj30?wmode=transparent&amp;vq=hd1080" src="https://www.youtube-nocookie.com/embed/6HYXZXOCj30?wmode=transparent&amp;vq=hd1080">
-</iframe>
-<iframe id="cc-m-video-youtu-container-14679679827" className="video-cont" frameBorder="0" allowFullScreen={true}  data-src="https://www.youtube-nocookie.com/embed/m9CidF5f0Kw?wmode=transparent&amp;vq=hd1080" src="https://www.youtube-nocookie.com/embed/m9CidF5f0Kw?wmode=transparent&amp;vq=hd1080">
-</iframe>
+      
           </Container>
         </div>
       </Container>

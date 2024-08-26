@@ -45,13 +45,15 @@ nav ul{
 
 
 nav a,p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-family: "Rubik";
+    font-weight: 500;
 }
 .navbar li{
     color: #000000;
     font-family: "Rubik";
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.5 rem;
 }
 .navbar-menuitem,.navbar-menuitem:active,.navbar-menuitem:link,.navbar-menuitem:visited,.navbar-menuitem:any-link{
     color: #000000;
@@ -76,7 +78,7 @@ nav a,p{
 .landing-blank-space{
     flex: 2;
     background: rgb(2,0,36);
-    linear-gradient:(in lch,0deg, rgba(2,0,36,1) 0%, rgba(35,56,114,1) 35%);
+    background:(in lch,0deg, rgba(2,0,36,1) 0%, rgba(35,56,114,1) 35%);
 }
 
 .landing-home{
@@ -134,13 +136,26 @@ nav a,p{
     padding: 2rem ;
 }
 
-.videos-cont h5{
+.home-inscripciones-cont h5{
     color: $secondary_color;
     font-family: "Rubik";
     font-size: 4rem;
     padding-bottom: 3rem;
 }
-.video-cont{
+.home-inscripciones-cont-p1{
+    color: $secondary_color;
+    font-family: "Rubik";
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.home-inscripciones-cont-p2{
+    color: $secondary_color;
+    font-family: "Rubik";
+    line-height: 2rem;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+.home-inscripciones-cont{
     border: 0px;
     display: block;
     flex: 2;
@@ -217,6 +232,36 @@ border-radius: 1%;
 .contacto-text-cont p{
     padding: 1rem 0;
 }
+
+.plan-estudios-h5{
+    color: $secondary_color;
+    font-size: 1.35rem;
+    font-weight: 500;
+    padding: 2rem 0;
+}
+
+.text-white-gen{
+    color: #FCFBF4;
+    font-family: "Rubik";
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+    line-height: 2rem;
+}
+
+.nuestra-historia{
+    min-height: 100vh;
+    background: rgb(2, 0, 36);
+    color: #FCFBF4;
+    font-family: "Rubik";
+}
+
+
+
+
+
+
+
+
 @media (max-width: 600px) {
     .logo-cont{
         display: flex;
