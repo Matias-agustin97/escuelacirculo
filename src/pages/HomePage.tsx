@@ -163,33 +163,8 @@ TERCEROS AÑOS TURNO NOCHE UN DÍA CON MATERIAS ASINCRÓNICAS.
         </div>
       </Container>
       <Divider/>
-     <Container>
-      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-      <ImageList sx={{ width: "100%", height: "auto",flex:1 }}>
-      
-      {itemData.map((item) => (
-        <ImageListItem key={item.img} sx={{cursor:"pointer"}}>
-          <video
-           
-            
-            src={item.img}
-            
-            
-          />
-          <ImageListItemBar
-            title={item.title}
-            subtitle={item.text}
-           
-            
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
-      </Box>
-     </Container>
-     <article style={{flex:1}}>
-      <Typography>SOBRE LA ESCUELA</Typography>
-     </article>
+   
+     
     </section>
     </>
   )

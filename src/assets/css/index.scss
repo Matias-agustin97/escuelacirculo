@@ -294,4 +294,21 @@ border-radius: 1%;
     .pad-mobile{
         padding: 0 2rem;
     }
+    .footer-social{
+        flex-direction: column;
+    }
+    .footer-social-cont{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .footer-social{
+        
+        width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+    .footer-info{
+        line-height: 2rem;
+    }
 }

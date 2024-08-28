@@ -20,6 +20,7 @@ import ConveniosUniversidades from './pages/ConveniosUniversidades.tsx'
 import Autoridades from './pages/Autoridades.tsx'
 import TrabajoCampo from './pages/TrabajoCampo.tsx'
 import PropuestasActualizacion from './pages/PropuestasActualizacion.tsx'
+import ErrorPage from './pages/ErrorPage.tsx'
 
 
 
@@ -49,63 +50,79 @@ const theme = createTheme({
 
 
 const router= createBrowserRouter([
-  {
+  { 
+    
     path:"/",
     element:<NavBar/>,
-    errorElement:<Errorelement/>,
+    
     children:[
       {
         path:"/",
-        element:<HomePage/>
+        element:<HomePage/>,
+        errorElement:<ErrorPage/>
       }
       ,{
         path:"/contacto",
-        element:<Contacto/>
+        element:<Contacto/>,
+        errorElement:<ErrorPage/>
       },
       {
         path:"/los-3-ejes",
-        element:<Los3Ejes/>
+        element:<Los3Ejes/>,
+        errorElement:<ErrorPage/>
       },
       {
         path:"/aranceles",
-        element:<Aranceles/>
+        element:<Aranceles/>,
+        errorElement:<ErrorPage/>
       },
       {
         path:"/plan-de-estudios",
-        element:<PlanDeEstudios/>
+        element:<PlanDeEstudios/>,
+        errorElement:<ErrorPage/>
       },{
         path:"nuestra-historia",
-        element:<NuestraHistoria/>
+        element:<NuestraHistoria/>,
+        errorElement:<ErrorPage/>
       },
       {
         path:"premios-olimpia",
-        element:<PremiosOlimpia/>
+        element:<PremiosOlimpia/>,
+        errorElement:<ErrorPage/>
       },
       {
         path:"propuesta-integral",
-        element:<PropuestaIntegral/>
+        element:<PropuestaIntegral/>,
+        errorElement:<ErrorPage/>
       },
       {
         path:"cursada-presencial",
-        element:<CursadaPresencial/>
+        element:<CursadaPresencial/>,
+        errorElement:<ErrorPage/>
       },{
         path:"cursada-hibrida",
-        element:<CursadaHibrida/>
+        element:<CursadaHibrida/>,
+        errorElement:<ErrorPage/>
       },{
         path:"nuestros-medios",
-        element:<NuestrosMedios/>
+        element:<NuestrosMedios/>,
+        errorElement:<ErrorPage/>
       },{
         path:"convenio-con-universidades",
-        element:<ConveniosUniversidades/>
+        element:<ConveniosUniversidades/>,
+        errorElement:<ErrorPage/>
       },{
         path:"autoridades",
-        element:<Autoridades/>
+        element:<Autoridades/>,
+        errorElement:<ErrorPage/>
       },{
         path:"trabajo-de-campo",
-        element:<TrabajoCampo/>
+        element:<TrabajoCampo/>,
+        errorElement:<ErrorPage/>
       },{
-        path:"propuestas-actualizacion",
-        element:<PropuestasActualizacion/>
+        path:"propuestas-de-actualizacion",
+        element:<PropuestasActualizacion/>,
+        errorElement:<ErrorPage/>
       }
     ]
   }

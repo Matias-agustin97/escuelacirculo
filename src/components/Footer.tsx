@@ -1,4 +1,4 @@
-import { Container } from '@mui/material'
+import { Container, useMediaQuery } from '@mui/material'
 
 import footerLogo from "../assets/pwa-192x192.png"
 import EmailSharpIcon from '@mui/icons-material/EmailSharp';
@@ -8,11 +8,17 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
 function Footer() {
+
+
+
+  const matches = useMediaQuery('(min-width:600px)');
+
+
   return (
     <section className='footer-cont'>
         <Container sx={{display:"flex",justifyContent:"center",alignItems:"stretch",flexDirection:"column"}}>
           <div className='footer-logo-text'>
-          <img src={footerLogo}/>
+          <img src={footerLogo} style={{height:"5rem"}}/>
             <p className='footer-text'> Escuela Superior de Periodismo Deportivo "José R. López Pájaro"
 
 (A-777) del Círculo de Periodistas Deportivos de Buenos Aires. </p>

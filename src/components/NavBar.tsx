@@ -40,14 +40,13 @@ function NavBar() {
   const [cursosActive, setcursosActive] = useState(false)
   //////////////////////////////////
   const laEscuela =[
-    {path:"/propuesta",text:"Propuesta Integral"},
+    {path:"/propuesta-integral",text:"Propuesta Integral"},
     {path:"/plan-de-estudios",text:"Plan de Estudios"},
     {path:"/cursada-presencial",text:"Cursada Presencial"},
     {path:"/cursada-hibrida",text:"Cursada Hibrida"},
     {path:"/nuestros-medios",text:"Nuestros Medios"},
     {path:"/convenios",text:"Convenios con Universidades"},
     {path:"/autoridades",text:"Autoridades"},
-    {path:"/profesores",text:"Profesores"},
     {path:"/trabajo-de-campo",text:"Trabajo de campo"},
     {path:"/voluntariado",text:"Voluntariado y tarea de prensa"},
     
